@@ -1,0 +1,180 @@
+:root{
+    --color-white:#fff;
+    --color-light :#f0eff5;
+    --color-gray-light :#86848c;
+    --color-gray-drak :#56555e;
+    --color-black:#000;
+    --color-danger-varient:rgba(247,88,66,.4);
+    --color-bg:#1f2641;
+    --color-bg1:#2e3267;
+    --color-bg2:#424890;
+    --color-primary :rgb(71,7,234);
+    --color-succes :rgb(34,202,75);
+    --color-danger:rgb(255,67,54);
+    --color-wraning:rgb(234,181,7);
+    --container-width-lg:76%;
+    --color-wraning:rgb(234,181,7);
+    --container-width-lg:80%;
+    --container-width-md:90%;
+    --container-width-sm:94%;
+    --transition: all .4s ease;
+
+}
+.about-achievements{
+    margin-top: 3rem;
+}
+.about-achievements-container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap:5rem;
+}
+.about-achievements-right >p{
+    margin: 1.6rem 0 2.5rem;
+}
+.achievements-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.achievement-card{
+    background-color: var(--color-bg1);
+    padding: 1.6rem;
+    border-radius: 1rem;
+    text-align: center;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+.achievement-card:hover{
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(0,0,0,.3);
+}
+.achievement-icon{
+    background: var(--color-danger);
+    padding:.6rem;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+.achievement-card:first-child .achievement-icon{
+    background-color: var(--color-succes);
+}
+.achievement-card:nth-child(2).achievement-icon{
+    background: var(--color-succes);
+}
+.achievement-card:nth-child(3) .achievement-icon{
+    background: var(--color-primary);
+}
+.achievement-card p{
+    margin-top: 1rem;
+}
+
+.team{
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0,0,0,.3);
+}
+.team-container{
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    gap:2rem;
+}
+.team-number{
+    background-color: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    overflow: hidden;
+    position: relative;
+}
+.team-number:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+}
+.team-number-image img{
+    filter: saturate(0);
+    -webkit-filter: saturate(0);
+}
+.team-number:hover img{
+    filter: saturate(1);
+    -webkit-filter: saturate(1);
+}
+.team-number-info *{
+
+    text-align: center;
+    margin-top: 1.4rem;
+}
+.team-number-info p{
+    color:var(--color-light)
+}
+.team-number-socials{
+    width:25px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s;
+    background-color: var(--color-primary);
+    border-radius: .7rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgba(0,0,0,.3);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-border-radius: .7rem 0 0 1rem;
+    -moz-border-radius: .7rem 0 0 1rem;
+    -ms-border-radius: .7rem 0 0 1rem;
+    -o-border-radius: .7rem 0 0 1rem;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+}
+.team-number:hover .team-number-socials{
+    right: 0;
+}
+.team-number-socials a{
+    padding: .2rem;
+}
+@media (max-width:1024px){
+    .about-achievements{
+        margin-top: 2rem;
+    }
+    .about-achievements-container{
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    .about-achievements-left{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .team-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .team-number{
+        padding: 1rem;
+    }
+
+
+}
+@media (max-width:600px){
+    .achievements-cards{
+        grid-template-columns: 1fr 1fr;
+        gap: .7rem;
+    }
+    .team-number{
+        padding: 0;
+    }
+    .team-number p{
+        margin-bottom: 1.5rem;
+    }
+    
+}
